@@ -1,0 +1,2 @@
+- cú pháp: git clone https://github.com/codegym-vn/wf-hello.git
+- ý nghĩa: sao chép Repo "wf-hello" có sẵn trên Github về máy tính của mình

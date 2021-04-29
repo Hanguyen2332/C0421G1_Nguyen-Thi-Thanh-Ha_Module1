@@ -1,0 +1,7 @@
+các câu lệnh:
+1. git clone: sao chép Remote Repo của new project về Local Repo
+2. git add .  đưa các file vào vùng staged
+3. git commit -m : ghi nhận các thay đổi này
+4. git push: đẩy file từ Local Repo lên Remote Repo
+
+Link : https://github.com/Hanguyen2332/my-new-project
