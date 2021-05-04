@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ĐĂNG KÝ HỌC VIÊN</title>
+    <style>
+        .form label{
+            float: left;
+            margin: 0 auto;
+        }
+        form {
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+<div style="background: #dbcf64">
+    <FORM action="link_server" method="get">
+        <h2 style="color: blue; background: aquamarine">ĐĂNG KÝ HỌC VIÊN</h2>
+        <div style="color: blue" class="form">
+            <div>
+                <label>Họ và tên</label>
+                <input type="text" ; name="fullname">
+            </div>
+            <br>
+            <div>
+                <label>Ngày sinh</label>
+                <input type="text" name="date of birth">
+            </div>
+            <br>
+            <div>
+                <label>Giới tính</label>
+                <input type="radio" name="gender" value="0">Nam
+                <input type="radio" name="gender" value="1">Nữ
+            </div>
+            <br>
+            <div>
+                <label>Địa chỉ</label>
+                <textarea cols="50" rows="4"></textarea>
+            </div>
+            <br>
+            <div>
+                <label>Lớp</label>
+                <select>
+                    <option name="class">---Chọn lớp---</option>
+                    <option name="class1" value="1">12A1</option>
+                    <option name="class2" value="2">12A2</option>
+                    <option name="class3" value="3">12A3</option>
+                </select>
+            </div>
+            <br>
+            <div>
+            <label>Email</label>
+            <input type="text" name="email">
+            </div>
+            <br>
+            <div>
+            <label>Điện thoại</label>
+            <input type="text" name="phonenumber">
+            </div>
+            <br>
+            <input type="submit" value="Đăng ký">
+            <input type="submit" value="Nhập lại">
+        </div>
+    </FORM>
+</div>
+</body>
+</html>
