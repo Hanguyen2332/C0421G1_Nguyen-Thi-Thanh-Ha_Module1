@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency conversion</title>
+    <style>
+
+        table {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<table align="center">
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" name="sotien" id="amount"></td>
+
+        <td>
+            <select name="from" style="width: 150px" id="fromCountry">
+                <option value="nuoc1">VietNam</option>
+                <option value="nuoc2">USD</option>
+            </select>
+        </td>
+
+        <td>
+            <select name="to" style="width: 150px" id="toCountry">
+                <option value="nuoc2">USD</option>
+                <option value="nuoc1">VietNam</option>
+            </select>
+        </td>
+
+        <th>
+            <button type="button" onclick="showConvert()"
+                    style="background: blue; color: #dddddd; font-size: larger">
+                Convert
+            </button>
+        </th>
+    </tr>
+    </table>
+<div id="result" style="text-align: center; font-size: x-large; color: blue">
+    <table>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</div>
+<script>
+    function showConvert() {
+        // Khai báo biến và gán giá trị cho biến:
+        let amount = document.getElementById("amount").value;
+        let fromCountry = document.getElementById("fromCountry").value;
+        let toCountry = document.getElementById("toCountry").value;
+        // Chuyển đổi:
+        if (fromCountry == toCountry) {
+         document.getElementById("result").innerText = "Result =" + amount
+        }
+        if (fromCountry == "nuoc1" && toCountry == "nuoc2") {
+            document.getElementById("result").innerText = ("Result =" + amount / 23000 + "VND");
+        }
+        if (fromCountry == "nuoc2" && toCountry == "nuoc1") {
+            document.getElementById("result").innerText = ("Result =" + amount * 23000 + "USD");
+        }
+    }
+</script>
+</body>
+</html>

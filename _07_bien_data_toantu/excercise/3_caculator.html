@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+    <style>
+        .t1 td {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<table align="center" class="t1">
+    <tr>
+        <td><input type="text" id="a"></td>
+        <td><input type="text" id="b"></td>
+    </tr>
+</table>
+<table align="center" class="t2">
+    <tr>
+        <td>
+            <button type="button" onclick="showAdd()">
+            Addition(+)
+            </button>
+        </td>
+        <td>
+            <button type="button" onclick="showSub()">
+            Subtraction(-)
+            </button>
+        </td>
+        <td>
+            <button type="button" onclick="showMul()">
+            Multiplication(X)
+            </button>
+        </td>
+        <td>
+            <button type="button" onclick="showDiv()">
+            Division(/)
+            </button>
+        </td>
+    </tr>
+</table>
+<br>
+<div id="Result" style="text-align: center; font-size: larger"></div>
+
+<script>
+function showAdd() {
+    let a = parseFloat(document.getElementById("a").value)
+    let b = parseFloat(document.getElementById("b").value)
+    let sum = a+b
+    document.getElementById("Result").innerText = "Result Addition: " + sum
+}
+function showSub() {
+    let a = parseFloat(document.getElementById("a").value)
+    let b = parseFloat(document.getElementById("b").value)
+    let sub = a-b
+    document.getElementById("Result").innerText = "Result  Subtraction: " + sub
+}
+function showMul() {
+    let a = parseFloat(document.getElementById("a").value)
+    let b = parseFloat(document.getElementById("b").value)
+    let mul = a*b
+    document.getElementById("Result").innerText = "Result  Multiplication: " + mul
+}
+function showDiv() {
+    let a = parseFloat(document.getElementById("a").value)
+    let b = parseFloat(document.getElementById("b").value)
+    let div = a/b
+    document.getElementById("Result").innerText = "Result  Division: " + div
+}
+</script>
+</body>
+</html>
