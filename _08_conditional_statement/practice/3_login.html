@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check user login</title>
+</head>
+<body>
+<script>
+    let userName = prompt("please input Username")
+    if (userName=="Admin") {
+        let p = prompt("Please input password")
+        switch (p) {
+            case "TheMaster":
+                alert("Welcome");
+                break;
+            case "":
+                alert("Canceled");
+                break;
+            default:
+                alert("Wrong password");
+                break;
+
+        }
+    }
+    else if (userName=="") {
+        alert("Canceled")
+    }
+    else {
+        alert("I don’t know you")
+    }
+
+</script>
+</body>
+</html>
