@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find the Largest number</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("input number a: "))
+    let b = parseInt(prompt("input number b: "))
+    let c = parseInt(prompt("input number c: "))
+    if (a>b) {
+        if (a>c) {
+            alert(a +" is the largest Number")
+        } else {
+            if (b<c)
+                alert(c +" is the largest Number")
+        }
+    }
+    else {
+        if (c<b)
+            alert(b + " is the largest Number")
+        else {
+            alert(c + " is the largest Number")
+        }
+    }
+
+</script>
+</body>
+</html>

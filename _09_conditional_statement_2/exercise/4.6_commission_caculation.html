@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculate commission</title>
+</head>
+<body>
+<script>
+    /* Hoa hồng theo tổng doanh thu của 1 ngày:
+    - Từ 0 đến 200k: hoa hồng là 3%
+    - Từ 200k đến 500k: hoa hồng là 5%
+    - Từ 500k trở lên: hoa hồng là 10%
+     */
+    let totalRevenue = parseFloat(prompt("input total revenue: ")); //tổng Doanh thu
+    if(totalRevenue <= 200000) {
+        var level1 = totalRevenue * (3 / 100)
+        alert("Tổng hoa hồng là " + level1 + " VND")
+    }
+     else if(totalRevenue <= 500000) {
+        var level2 = 200000 * (3 / 100) + (500000 - 200000) * (5 / 100)
+        alert("Tổng hoa hồng là " + level2 + " VND")
+    }
+     else  {
+        var level3 = 200000*(3/100) + (500000 - 200000)*(5 / 100) + (totalRevenue-500000)*(10/100)
+        alert("Tổng hoa hồng là " + level3 + " VND")
+    }
+
+</script>
+</body>
+</html>

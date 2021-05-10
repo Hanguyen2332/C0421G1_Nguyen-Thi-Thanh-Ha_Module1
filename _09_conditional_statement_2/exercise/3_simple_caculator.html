@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple_Caculator</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <input type="text" name="biểu thức" id="expression">
+    </tr>
+    <tr>
+        <th>
+            <button type="button" value="1" onclick="showNumber(this.value)">1</button>
+        </th>
+        <th>
+            <button type="button" value="2" onclick="showNumber(this.value)">2</button>
+        </th>
+        <th>
+            <button type="button" value="3" onclick="showNumber(this.value)">3</button>
+        </th>
+        <th>
+            <button type="button" value="+" onclick="showNumber(this.value)">+</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button type="button" value="4" onclick="showNumber(this.value)">4</button>
+        </th>
+        <th>
+            <button type="button" value="5" onclick="showNumber(this.value)">5</button>
+        </th>
+        <th>
+            <button type="button" value="6" onclick="showNumber(this.value)">6</button>
+        </th>
+        <th>
+            <button type="button" value="-" onclick="showNumber(this.value)">-</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button type="button" value="7" onclick="showNumber(this.value)">7</button>
+        </th>
+        <th>
+            <button type="button" value="8" onclick="showNumber(this.value)">8</button>
+        </th>
+        <th>
+            <button type="button" value="9" onclick="showNumber(this.value)">9</button>
+        </th>
+        <th>
+            <button type="button" value="*" onclick="showNumber(this.value)">x</button>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <button type="reset" id="reset" onclick="xoa()">C</button>
+        </th>
+        <th>
+            <button type="button" value="0" onclick="showNumber(this.value)">0</button>
+        </th>
+        <th>
+            <button type="button" id="result" onclick="kq()">=</button>
+        </th>
+        <th>
+            <button type="button" id="div" value="/" onclick="showNumber(this.value)">/</button>
+        </th>
+    </tr>
+</table>
+</body>
+<script>
+    let x = "";
+    function numberButton(id) {
+        return document.getElementById(id);
+    }
+    function showNumber(number) {
+        x+=number; //x= x+number (vd: x= "" + "hoa" = "hoa")
+        // x=number (vd: number=3 ==> x=3, number=2 ==> x=2, tức là biến được cấp nhật mới)
+        numberButton("expression").value=x
+    }
+    function xoa() {
+         x = ""
+        numberButton("expression").value=x
+    }
+    function kq() {
+        numberButton("expression").value =eval(numberButton("expression").value)
+        x = numberButton("expression").value
+    }
+</script>
+</html>

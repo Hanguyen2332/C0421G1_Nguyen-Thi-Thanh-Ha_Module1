@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grading student_Math</title>
+</head>
+<body>
+<script>
+    //ĐTBmhk = (TĐĐGtx + 2*GK + 3*CK)/(Số ĐĐGtx + 5)
+    let a = prompt("Nhập điểm kiểm tra 15p:")
+    let b = prompt("Nhập điểm kiểm tra 1 tiết:")
+    let c = prompt("Nhập điểm kiểm tra Giữa kỳ:")
+    let d = prompt("Nhập điểm kiểm tra Cuối kỳ:")
+    let average = (Number(a) + Number(b) + Number(c*2) + Number(d*3))/7
+    let DTBhk = average.toFixed(1)
+    alert(DTBhk);
+    if(DTBhk >=8.0) {
+        alert("Xếp loại giỏi")
+    } else if (DTBhk >=6.5) {
+        alert("Xếp loại khá")
+    } else if (DTBhk >=5.0) {
+        alert("Xếp loại trung bình")
+    } else if (DTBhk >=3.5) {
+        alert("Xếp loại yếu")
+    }
+    else
+        alert("Xếp loại kém")
+</script>
+
+</body>
+</html>
