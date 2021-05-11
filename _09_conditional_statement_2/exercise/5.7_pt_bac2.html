@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<script>
+    /* Xét phương trình ax2+bx+c=0 (1)
+    Tính delta=b2-4ac;
+    delta < 0 => phương trình (1) vô nghiệm
+    delta = 0 => phương trình (1) có nghiệm kép X1=X2=(-b)/(2*a)
+    delta > 0 => phương trình (1) có 2 nghiệm phân biệt:
+    x1 = ((-b)+Math.sqrt(delta))/(2*a)
+    x2 = ((-b)-Math.sqrt(delta))/(2*a)
+     */
+    let a = parseFloat(prompt('nhập số a:'))
+    let b = parseFloat(prompt('nhập số b:'))
+    let c = parseFloat(prompt('nhập số c:'))
+    delta = b**2 - (4*a*c)
+    if(delta < 0 ) {
+        alert('phương trình vô nghiệm');
+    }else if(delta==0) {
+        alert('phương trình nghiệm kép: ' +
+             'x1 ' + '=' + 'x2 '+ '= '+ (-b)/(2*a)
+        ) }
+    else {
+        alert('phương trình có 2 nghiệm phân biệt: ' +
+                'x1 ' + '= ' + ((-b)+Math.sqrt(delta))/(2*a) + ' và' +
+                ' x2 ' + '= ' + ((-b)-Math.sqrt(delta))/(2*a)
+        )
+    }
+
+</script>
+</body>
+</html>

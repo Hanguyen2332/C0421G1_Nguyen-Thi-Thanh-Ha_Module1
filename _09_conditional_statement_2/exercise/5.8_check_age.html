@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check age</title>
+</head>
+<body>
+<script>
+    // a = parseFloat(prompt("Nhập tuổi: "));
+    // if (a <= 120 && a>0 && a%1==0) {
+    //     alert(true);
+    // } else {
+    //     alert(false);
+    // }
+
+    let age = parseFloat(prompt('Please input age:'));
+            if(age > 0 && age <=120 && Number.isInteger(age)) {
+            alert(age + ' là tuổi của một người.');
+        }   else
+            alert(age + ' không phải là tuổi của một người.');
+</script>
+</body>
+</html>

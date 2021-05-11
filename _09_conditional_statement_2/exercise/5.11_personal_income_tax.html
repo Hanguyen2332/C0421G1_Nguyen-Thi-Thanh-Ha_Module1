@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    /* Thu nhập tính thuế (TNTT) từ 0-5trđ/tháng : Thuế TNCN = 5%TNTT
+    Thu nhập tính thuế (TNTT) từ 6-10trđ/tháng : Thuế TNCN = 10%TNTT - 0.25trđ
+    Thu nhập tính thuế (TNTT) từ 11-18trđ/tháng : Thuế TNCN = 15%TNTT - 0.75trđ
+    Thu nhập tính thuế (TNTT) từ 19-32trđ/tháng : Thuế TNCN = 20%TNTT - 1.65trđ
+    Thu nhập tính thuế (TNTT) từ 33-52 trđ/tháng : Thuế TNCN = 25%TNTT - 3.25trđ
+    Thu nhập tính thuế (TNTT) từ 53-80 trđ/tháng : Thuế TNCN = 30%TNTT - 5.85trđ
+    Thu nhập tính thuế (TNTT) từ 81trđ/tháng : Thuế TNCN = 30%TNTT - 9.85trđ
+     */
+    let tntt = parseFloat(prompt('nhập số TNTT/tháng :'));
+    if (0 < tntt <=5000000) {
+        alert('Thuế TNCN = ' + tntt*5/100)
+    } else if (tntt <=10000000) {
+        alert('Thuế TNCN = ' + (tntt*10/100-250000))
+    }else if (tntt <=18000000) {
+        alert('Thuế TNCN = ' + (tntt*15/100-750000))
+    }else if (tntt <=32000000) {
+        alert('Thuế TNCN = ' + (tntt*20/100-1650000))
+    }else if (tntt <=52000000) {
+        alert('Thuế TNCN = ' + (tntt*25/100-3250000))
+    }else if (tntt <=80000000) {
+        alert('Thuế TNCN = ' + (tntt*30/100-5850000))
+    }else {
+        alert('Thuế TNCN = ' + (tntt*30/100-9850000))
+    }
+</script>
+</body>
+</html>
