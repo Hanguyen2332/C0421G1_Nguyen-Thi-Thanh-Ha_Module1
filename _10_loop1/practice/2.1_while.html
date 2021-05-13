@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nhập số_in_tính tổng</title>
+</head>
+<body>
+<script>
+    /* 2 Giai đoạn:
+    1. (nhập số --> num==-1 stop
+        in ra: document.write....)
+    2. tính tổng:
+        sum = sum+num
+     */
+    let num = parseFloat(prompt("Enter a number: "));
+    let total = 0;
+    while( num != -1 ) {
+        num = parseFloat(prompt("Enter a number: "));
+        console.log(num);
+        total += num;
+    }
+    console.log(total)
+
+</script>
+</body>
+</html>

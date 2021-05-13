@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Interest</title>
+</head>
+<body>
+<script>
+    /*Công thức tính lãi suất theo dư nợ giảm dần
+
+    Tiền gốc hàng tháng = Số tiền vay/Số tháng vay
+    Tiền lãi tháng đầu = Số tiền vay * Lãi suất vay theo tháng
+    Tiền lãi các tháng tiếp theo = Số tiền gốc còn lại * Lãi suất vay
+    Ví dụ: Bạn vay ngân hàng 50 triệu đồng, thời hạn trong 12 tháng (1 năm) với mức lãi suất 12%/ năm
+
+    Tiền gốc trả hàng tháng = 50 triệu/12 ~ 4.1 triệu
+    Tiền lãi tháng đầu = (50 triệu * 12%)/12 = 500.000 VNĐ
+    Tiền lãi tháng thứ 2  = (50 triệu – 4.1 triệu)*12%/12 ~ 458.000 VNĐ
+    Các tháng tiếp theo tiếp tục được tính như vậy đến khi trả hết nợ
+     */
+
+
+    let month= 0;
+    let tienGoc= 50000000;
+    let tienLai = 0;
+    let tongLai=0
+    do {
+        tienLai= (tienGoc*12/100)/12
+        tongLai+=tienLai
+        tienGoc-=4100000;
+        month++
+        document.write('Lãi T. ' + month + ' = '+ tienLai.toLocaleString( 'de-DE' ) + ' VND'+'<br>');
+    } while (month<12);
+    document.write('Tổng lãi = '+ tongLai.toLocaleString( 'de-DE') + 'VND');
+
+</script>
+</body>
+</html>

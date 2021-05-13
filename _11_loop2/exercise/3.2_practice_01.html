@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>control temperature</title>
+</head>
+<body>
+<script>
+    let temp = prompt("Please enter temperature:")
+    while (temp < 20) {
+        alert('Please increase temperature')
+        temp = prompt("Please enter temperature:")
+        if (temp >= 100) {
+            alert('Please decrease temperature')
+            temp = prompt("Please enter temperature:")
+        }
+    }
+</script>
+</body>
+</html>
+

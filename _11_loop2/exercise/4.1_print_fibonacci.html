@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy Fibonacci</title>
+</head>
+<body>
+<script>
+    let x=0;
+    let x1=1;
+    let xn;
+    let n = parseInt(prompt('please enter quantity of Fibonacci'));
+    for (i=0; i<=n; i++) {
+        if (i<2) {
+            document.write(i+ '; ');
+        } else {
+            xn=x+x1;
+            x=x1;
+            x1=xn;
+            document.write(xn + '; ');
+        }
+    }
+</script>
+</body>
+</html>

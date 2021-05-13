@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<p style="text-align: center"><button type="button" onclick="play()">Chơi ngay chờ chi!</button></p>
+<script>
+function play() {
+    let min=parseInt(prompt('Mời nhập số bé nhất'));
+    let max=parseInt(prompt('Mời nhập số cuối khoảng dự đoán'));
+    let ramdom = Math.floor(Math.random()*(max-min+1)+min);
+    let soDuDoan = parseInt(prompt('Chọn 1 số đi!'));
+    for (count=1;count<3; count++) {
+        if(soDuDoan < ramdom) {
+            soDuDoan = parseInt(prompt("Đã sai còn nhỏ. Còn " + (3-count) + " Lượt. Chọn lại!"));
+        }
+            else if (soDuDoan > ramdom ) {
+            soDuDoan = parseInt(("Đã sai còn chơi lớn. Còn " + (3-count) + " Lượt. Chọn lại!"));
+            }
+            else {
+            alert("Trúng cái phóc! Chúc mừng!!!")
+            break;
+        }
+    }
+}
+
+
+
+</script>
+</body>
+</html>
