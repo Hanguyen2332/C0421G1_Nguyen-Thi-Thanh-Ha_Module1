@@ -7,7 +7,7 @@
 <body>
 
 <script>
-
+    // //C1:
     let string1 = prompt("Nhập chuỗi 1: ");
     let string2 = prompt("Nhập chuỗi 2: ");
     let result = string1.localeCompare(string2);
@@ -16,6 +16,32 @@
     }
     else
         alert("Chuỗi 1 khác chuỗi 2");
+
+    // //C2:
+
+    let a = ['a', 's', 'hoa', 'co', 4, 6];
+    let b = ['a', 's', 'Hoa', 'co', 4, 6];
+    // chuyển mảng thành chuỗi
+    let str_a = a.toString();
+    let str_b = b.toString();
+   // so sánh 2 chuỗi:
+    let check = false
+    if (str_a.length != str_b.length) {
+        console.log('chuỗi 1 khác chuỗi 2');
+    }
+    if (str_a.length == str_b.length) {
+        for (i = 0; i < str_a.length; i++) {
+            if (str_a.charAt(i) !== str_b.charAt(i)) {
+                console.log('chuỗi 1 khác chuỗi 2')
+                check = true;
+                break;
+            }
+        }
+        if (check == false) {
+            console.log('chuỗi 1 giống chuỗi 2');
+        }
+    }
+
 
 </script>
 </body>
