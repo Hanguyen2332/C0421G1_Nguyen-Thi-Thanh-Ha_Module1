@@ -5,27 +5,33 @@
     <title>Thêm vào các phần tử trong một mảng </title>
 </head>
 <body>
-<input type="text" id="txtValue"/>
-<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
-<input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
-<div id="result"></div>
-<script>
-    let x = 0;
-    let array = Array();
-    function add_element_to_array() {
-        array[x] = document.getElementById("txtValue").value;
-        alert("Element: " + array[x] + " Added at index " + x);
-        x++;
-        document.getElementById("txtValue ").value = "";
-    }
-    function display_array() {
-        let e = "<hr/>";
-        for (let i = 0; i < array.length; i++) {
-            e += "Element " + i + " = " + array[i] + "<br/>";
-        }
-        document.getElementById("result").innerHTML = e;
 
+<!--<input type="text" id="txtValue"/>-->
+<!--<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>-->
+<!--<input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>-->
+<!--<div id="result"></div>-->
+
+<input type="text" width="20px" id="get.value">
+<input type="button" onclick="add()" value="Add">
+<button type="button" onclick="display()">Display</button>
+<p id="disE"></p>
+
+<script>
+    let i=0;
+    let arr = new Array();
+    function add() {
+        arr.push(document.getElementById("get.value").value);
+        document.getElementById("get.value").value = ''
+            }
+
+    function display() {
+        let html = ''
+        for (i=0; i<arr.length;i++) {
+            html+= 'Element ' + i + '= ' + arr[i] + '<br>'
+        }
+        document.getElementById("disE").innerHTML= html;
     }
+
 </script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chèn dấu (-) giữa 2 số chẵn.</title>
+</head>
+<body>
+<script>
+
+    let myA = new Array();
+    let n = parseInt(prompt('nhập độ dài mảng: '))
+    for (i=0; i<n; i++) {
+        myA[i] = prompt('nhập giá trị a ['+i+']: ');
+    }
+    let result = [myA[0]];
+    for(x=1; x < myA.length; x++) {
+        if(myA[x-1]%2==0 && myA[x]%2==0) {
+            result.push('-', myA[x] )
+        }
+        else {
+            result.push(myA[x])
+        }
+    }
+    document.write(result)
+
+</script>
+</body>
+</html>

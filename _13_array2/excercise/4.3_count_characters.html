@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số ký tự số </title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("input length : "));
+    let arr = new Array(n);
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt("input Element: "));
+    }
+    for (let i = 0; i < n; i++) {
+        let num = parseFloat(arr[i]);
+        if (isNaN(num)) {
+            continue;
+        } else {
+            count++;
+        }
+    }
+    alert("Numeric characters in the array is: " + count);
+
+</script>
+</body>
+</html>

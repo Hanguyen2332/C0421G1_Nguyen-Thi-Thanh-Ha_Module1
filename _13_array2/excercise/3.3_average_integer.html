@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giá trị trung bình của các phần tử trong mảng. </title>
+</head>
+<body>
+<script>
+let n = parseInt(prompt('enter array length: '));
+let b = new Array(n);
+let max = 0;
+let sum = 0;
+let average;
+
+for(i=0; i < b.length; i++) {
+    b[i] = parseInt(prompt('input element: '))
+    sum+=b[i]
+    average = sum/n;
+    if (max < b[i]) {
+        max = b[i]
+    }
+}
+document.write('số lớn nhất là ' + max + '<br>')
+document.write('giá trị trung bình của mảng là ' + average)
+
+</script>
+</body>
+</html>

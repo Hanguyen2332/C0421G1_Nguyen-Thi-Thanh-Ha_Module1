@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thay thế các ký tự (-) bởi ký tự ( _ )</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('nhập độ dài mảng'))
+    let arr = new Array()
+    for (i = 0; i < n; i++) {
+        arr[i] = prompt('nhập phần tử ' + i)
+    }
+    str = [arr.toString().split('-').join('_')]
+    document.write(str + '<br>')
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice_concat</title>
+</head>
+<body>
+<script>
+    //C1:
+    let a = new Array(10);
+    let b = new Array(10)
+    let c = [];
+    for (let i = 0; i < a.length; i++) {
+        a[i] = parseInt(prompt('input Element of array a: '));
+    }
+    document.write(a + '<br>');
+    for (let i = 0; i < b.length; i++) {
+        b[i] = parseInt(prompt('input Element of array b: '));
+    }
+    document.write(b + '<br>');
+    c = a.concat(b)
+    document.write(c)
+
+    // C2:
+    let a = new Array(10);
+    let b = new Array(10)
+    let c = [];
+    for (let i = 0; i < a.length; i++) {
+        a[i] = parseInt(prompt('input Element of array a: '));
+    }
+    document.write(a + '<br>');
+    for (let i = 0; i < b.length; i++) {
+        c = a
+        b[i] = parseInt(prompt('input Element of array b: '));
+        c.push(b[i]);
+    }
+    document.write(c);
+
+
+</script>
+</body>
+</html>
+
+

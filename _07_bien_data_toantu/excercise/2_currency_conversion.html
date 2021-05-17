@@ -42,13 +42,7 @@
         </th>
     </tr>
     </table>
-<div id="result" style="text-align: center; font-size: x-large; color: blue">
-    <table>
-        <tr>
-            <td></td>
-        </tr>
-    </table>
-</div>
+<div id="result" style="text-align: center; font-size: x-large; color: blue"></div>
 <script>
     function showConvert() {
         // Khai báo biến và gán giá trị cho biến:
@@ -57,13 +51,13 @@
         let toCountry = document.getElementById("toCountry").value;
         // Chuyển đổi:
         if (fromCountry == toCountry) {
-         document.getElementById("result").innerText = "Result =" + amount
+         document.getElementById("result").innerText = "Result =" + amount.toLocaleString()
         }
         if (fromCountry == "nuoc1" && toCountry == "nuoc2") {
-            document.getElementById("result").innerText = ("Result =" + amount / 23000 + "VND");
+            document.getElementById("result").innerText = ("Result =" + (amount / 23000).toLocaleString() + "VND");
         }
         if (fromCountry == "nuoc2" && toCountry == "nuoc1") {
-            document.getElementById("result").innerText = ("Result =" + amount * 23000 + "USD");
+            document.getElementById("result").innerText = ("Result =" + (amount * 23000).toLocaleString() + "USD");
         }
     }
 </script>

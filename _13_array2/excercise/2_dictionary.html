@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<div>Từ điển Anh-Việt</div>
+<input type="text" id="data">
+<input type="button" value="Search" onclick="search()">
+<p id="result"></p>
+<script>
+    let arr_EN = ['teacher', 'brother', 'sister', 'river' ];
+    let arr_VN = ['giáo viên', 'anh trai', 'chị gái', 'sông'];
+    function search() {
+        input = document.getElementById('data').value
+        for (i=0; i < arr_EN.length; i++) {
+            if (arr_EN[i] == input) {
+                document.getElementById('result').innerText = arr_VN[i]
+             break;
+            }
+            else {
+                document.getElementById('result').innerText = 'Từ bạn tìm không có trong từ điển'
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<div>
+    <h1>Temperature Converter</h1> <br>
+    <p>Type a value in the Fahrenheit field to convert the value to Celcius </p>
+    Fahrenheit <input type="number" id="data" placeholder="1">
+    <input type="button" value="convert" onclick="convert()">
+    <p>Celcius:<span id="result"></span> </p>
+</div>
+<script>
+    function convert(OF) {
+        return  OC = (OF - 32)/1.8
+    }
+    OF = document.getElementById("data").value;
+   document.getElementById("result").innerHTML=convert(OF);
+</script>
+</body>
+</html>

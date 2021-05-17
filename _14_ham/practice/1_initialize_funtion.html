@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function myConfirm(answer) {
+        let result = "";
+        if (answer) {
+            result = "wellcome to my country";
+        } else {
+            result = "bye bye";
+        }
+        return result;
+    }
+    // console.log(confirm)
+    let confirmAnswer = confirm("Do you want to come VietNam?");
+    let theAnswer = myConfirm(confirmAnswer);
+    alert(theAnswer);
+
+
+</script>
+</body>
+</html>

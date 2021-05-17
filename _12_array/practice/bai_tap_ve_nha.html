@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chèn phần tử vào vị trí bất kỳ của mảng</title>
+</head>
+<body>
+<script>
+
+    // let arr = [1,3,5,7,9]
+    // arr.push(6)
+    // document.write(arr + '<br>');
+    // //Muốn thêm vào vị trí  i =3
+    // for (i=3; i < arr.length; i++ ) {
+    //     b = arr[i];
+    //     arr[i] = arr[5];
+    //     arr[5] = b
+    // }
+    // document.write(arr);
+
+ // //MỞ RỘNG;
+
+    let array = new Array();
+    let length = parseInt(prompt('Please input length of array: '));
+    for (i=0; i < length; i++) {
+        array[i] = prompt('Please enter a ['+ i + ']: ');
+    }
+    document.write('Before pushing: ' + array + '<br>');
+    //chèn phần tử vào
+    let add_E = prompt('Enter new Element: ');
+    array.push(add_E);
+    document.write('After pushing: ' + array + '<br>');
+    //sắp xếp vị trí
+    let add_in = prompt('Enter position of new Element: ');
+    for(i=add_in; i < array.length; i++) {
+        b = array[i];
+        array[i] = array[array.length-1];
+        array[array.length-1] = b;
+    }
+    document.write('Array after arranging: ' + array)
+
+    //C2:
+
+    let array = [9,8,45,71];
+    let rd = Math.floor((Math.random()* array.length));
+    console.log(rd)
+    let data = prompt("nhap gia tri : ")
+    let result = [array[0]];
+    for (let i= 1 ; i < array.length; i++){
+        if ( i === rd ){
+            result.push(data,array[i]);
+        }else {
+            result.push(array[i]);
+        }
+    }console.log(result.join())
+</script>
+</body>
+</html>

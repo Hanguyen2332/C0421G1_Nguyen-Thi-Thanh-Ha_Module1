@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V is in the array??</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('enter array length: '));
+    let b = new Array(n);
+    for(i=0; i < b.length; i++) {
+        b[i] = parseInt(prompt('input element: '));
+    }
+    //check v:
+    let v = parseInt(prompt('enter v: '));   //3
+    let check = false
+    for (i=0; i < b.length; i++) {  //1 2 3 4 5
+        if (v===b[i]) {
+            document.write('V is in the array')
+            check = true;
+            break;
+        }
+    }
+    if (check == false) {
+        document.write('V is not in the array')
+    }
+
+</script>
+</body>
+</html>

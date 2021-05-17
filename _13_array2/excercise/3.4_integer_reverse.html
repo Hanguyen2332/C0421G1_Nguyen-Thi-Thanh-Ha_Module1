@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược các phần tử trong mảng</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('enter array length: '));
+    let b = new Array(n);
+    for(i=0; i < b.length; i++) {
+        b[i] = parseInt(prompt('input element: '))
+    }
+    document.write('mảng: ' + b + '<br>');
+    document.write('đảo ngược mảng: '+ b.reverse())
+
+</script>
+</body>
+</html>
