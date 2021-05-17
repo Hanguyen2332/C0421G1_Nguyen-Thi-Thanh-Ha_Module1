@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>tam giác vuông góc phải trên</title>
 </head>
 <body>
+<script>
+    let h=5
+    for (i=1;i<=h;i++) {
+        for (j=1; j<=h; j++) {
+            if(j<=(i-1)) {
+                document.write('&nbsp &nbsp');
+            }
+            else
+                document.write('* ');
+        }
+        document.write('<br>')
+    }
+</script>
 
 </body>
 </html>

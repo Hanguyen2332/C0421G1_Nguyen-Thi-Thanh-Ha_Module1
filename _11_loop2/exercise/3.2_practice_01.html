@@ -6,13 +6,16 @@
 </head>
 <body>
 <script>
-    let temp = prompt("Please enter temperature:")
-    while (temp < 20) {
-        alert('Please increase temperature')
-        temp = prompt("Please enter temperature:")
-        if (temp >= 100) {
-            alert('Please decrease temperature')
-            temp = prompt("Please enter temperature:")
+    let temp = null;
+    while (true) {
+        let temp = parseInt(prompt("Please enter temperature:"));
+        if (temp >=100) {
+            alert("Please decrease temperature: ");
+        } else if (temp <= 20) {
+            alert("Please increase temperature: ");
+        } else {
+        alert(" yeah I got it");
+        break;
         }
     }
 </script>
