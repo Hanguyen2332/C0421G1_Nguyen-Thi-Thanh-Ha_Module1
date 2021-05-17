@@ -6,12 +6,23 @@
 </head>
 <body>
 <script>
+    // let a = [ 'c', 's', 'c', '2', '6', '1' ];
+    // let reverse_a = ''
+    // for (i=a.length-1; i>=0; i--) {
+    //     reverse_a += a[i];
+    // }
+    // document.write(reverse_a);
+
+    //C2:
     let a = [ 'c', 's', 'c', '2', '6', '1' ];
-    let reverse_a = ''
-    for (i=a.length-1; i>=0; i--) {
-        reverse_a += a[i];
+    let temp = a[0];
+    for (i=1; i < a.length; i++) {
+        a[i] = a[a.length - 1 - i];
+        a[a.length - 1 - i] = temp;
+        temp = a[i];
     }
-    document.write(reverse_a);
+    document.write(a);
+
 </script>
 </body>
 </html>

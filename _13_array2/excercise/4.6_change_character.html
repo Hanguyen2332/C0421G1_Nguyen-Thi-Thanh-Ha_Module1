@@ -6,13 +6,31 @@
 </head>
 <body>
 <script>
-    let n = parseInt(prompt('nhập độ dài mảng'))
-    let arr = new Array()
-    for (i = 0; i < n; i++) {
-        arr[i] = prompt('nhập phần tử ' + i)
+    //C1:
+    // let n = parseInt(prompt('nhập độ dài mảng'))
+    // let arr = new Array()
+    // for (i = 0; i < n; i++) {
+    //     arr[i] = prompt('nhập phần tử ' + i)
+    // }
+    // str = [arr.toString().split('-').join('_')]
+
+    //C2:
+
+    let arr = new Array('hoa-', 'hau-', 'hoan');
+    str = arr.toString()
+    console.log(str)
+    str1 = str.split('')
+    console.log(str1)
+    result = [];
+    for(i=0; i < str1.length; i++) {
+        if(str1[i] == '-') {
+            result.push('_');
+        } else
+            result.push(str1[i]);
     }
-    str = [arr.toString().split('-').join('_')]
-    document.write(str + '<br>')
+    result2 = result.join('')
+    document.write(result2 + '<br>')
+
 </script>
 </body>
 </html>
