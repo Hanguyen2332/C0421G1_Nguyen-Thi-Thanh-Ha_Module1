@@ -8,16 +8,22 @@
 <div>
     <h1>Temperature Converter</h1> <br>
     <p>Type a value in the Fahrenheit field to convert the value to Celcius </p>
-    Fahrenheit <input type="number" id="data" placeholder="1">
-    <input type="button" value="convert" onclick="convert()">
-    <p>Celcius:<span id="result"></span> </p>
+    Fahrenheit <input type="number" id="data" oninput="convertTemp()" onchange="convertTemp()">
+    <p>Celcius:<span id="result"></span></p>
 </div>
 <script>
-    function convert(OF) {
-        return  OC = (OF - 32)/1.8
+
+    function convertTemp(fah) {
+        fah = parseFloat(document.getElementById("data").value);
+        document.getElementById("result").innerHTML = (fah - 32)/1.8;
+        // console.log((fah - 32)/1.8)
+        //dùng return để giải quyết bài toán đc k?
     }
-    OF = document.getElementById("data").value;
-   document.getElementById("result").innerHTML=convert(OF);
+
+
+
+
+
 </script>
 </body>
 </html>
