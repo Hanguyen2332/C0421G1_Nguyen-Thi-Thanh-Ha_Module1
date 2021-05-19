@@ -12,12 +12,10 @@
     // for (let i = 0; i < n; i++) {
     //     arr[i] = parseInt(prompt("input Element: "));
     // }
-    let arr = new Array(1,2,3);
-    for (let i = 0; i < n; i++) {
-        let num = parseFloat(arr[i]);
-        if (isNaN(num)==true) {
-            continue;
-        } else {
+    let arr = new Array(1,2,3,'4','hoa');
+    let count = 0;
+    for (let i = 0; i < arr.length ; i++) {
+        if (!isNaN(arr[i])) {
             count++;
         }
     }

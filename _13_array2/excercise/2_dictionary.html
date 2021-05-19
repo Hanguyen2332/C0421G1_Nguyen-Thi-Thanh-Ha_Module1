@@ -16,11 +16,13 @@
         input = document.getElementById('data').value
         for (i=0; i < arr_EN.length; i++) {
             if (arr_EN[i] == input) {
+                // console.log(arr_VN[i])
                 document.getElementById('result').innerText = arr_VN[i]
              break;
             }
             else {
                 document.getElementById('result').innerText = 'Từ bạn tìm không có trong từ điển'
+                // console.log('Từ bạn tìm không có trong từ điển')
             }
         }
     }

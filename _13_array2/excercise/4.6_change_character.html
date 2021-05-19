@@ -16,7 +16,7 @@
 
     //C2:
 
-    let arr = new Array('hoa-', 'hau-', 'hoan');
+    let arr = new Array('hoa-', 'hau-', 'ho-an');
     str = arr.toString()
     console.log(str)
     str1 = str.split('')
@@ -27,8 +27,10 @@
             result.push('_');
         } else
             result.push(str1[i]);
-    }
-    result2 = result.join('')
+            }
+    console.log(result)
+    // document.write(result + '<br>')
+    result2 = result.join('+')
     document.write(result2 + '<br>')
 
 </script>
