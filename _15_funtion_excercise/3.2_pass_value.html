@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="input" oninput="increase_Value(this.value)" onchange="increase_Value(this.value)">
+<p id="result"></p>
+<script>
+    function increase_Value(num) {
+        num = parseFloat(document.getElementById("input").value);
+        document.getElementById('result').innerText = ('đối số sau khi tăng 1 là: ' + (num+1));
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //đảo ngược mảng số nguyên.
+    function reverse_arr(arr) {
+        return arr.reverse();
+    }
+    let n = parseInt(prompt('input array length: '));
+    let a = new Array(n);
+    for (i=0; i < n; i++) {
+        a[i] = parseInt(prompt('input Element ' + i));
+    }
+    document.write(a + '<br>');
+    let result = document.write(reverse_arr(a));
+</script>
+</body>
+</html>

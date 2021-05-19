@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isInteger(num) {
+        if (num > 0 && num%1==0) {
+            return num + ' is Integer'
+        } else {
+            return num + ' is NOT Integer'
+        }
+    }
+    let a = parseFloat(prompt('input a: '));
+    result = alert(isInteger(a));
+</script>
+</body>
+</html>

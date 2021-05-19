@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //tạo hàm tìm số min trong 3 số
+    function minNumber(a, b, c) {
+        if (a < b && a < c) {
+            return a + ' is min Number'
+        } else if (b < a && b < c) {
+            return b + ' is min Number'
+        } else {
+            return c + ' is min Number'
+        }
+    }
+
+    let a = parseFloat(prompt('input a: '));
+    let b = parseFloat(prompt('input b: '));
+    let c = parseFloat(prompt('input c: '));
+    result = alert(minNumber(a, b, c));
+
+
+</script>
+</body>
+</html>

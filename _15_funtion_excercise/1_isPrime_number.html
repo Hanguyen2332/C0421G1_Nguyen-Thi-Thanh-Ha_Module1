@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>is Prime Number</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let count=0;
+        for(let i=1; i<=number;i++) {
+            if(number%i==0) {
+                count++;
+            }
+        }
+        if( count==2) {
+            return true
+        } else
+            return false
+    }
+ for(let i=1; i<=1000; i++) {
+     /* Nếu không dùng 'let' --> kq in ra sẽ SAI, vì bị giá trị i tròng vòng lặp của function ảnh hưởng.
+     (giá trị i sau mỗi vòng lặp của function bên trên chính là gí trị của i ở vòng lặp dưới)
+      */
+     if(isPrime(i)) {
+         document.write(i);
+     }
+ }
+
+</script>
+</body>
+</html>
