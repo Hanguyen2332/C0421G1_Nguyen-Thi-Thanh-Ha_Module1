@@ -19,24 +19,31 @@
     // //C2:
 
     let a = 'anh hoa co46';
-    let b = 'anh Hoa co46';
-    // chuyển mảng thành chuỗi
+    let b = 'anh hoa co56';
+    // chuyển chuỗi sang mảng
     let arr_a = a.split('');
     let arr_b = b.split('');
     // so sánh 2 chuỗi:
     let check = true
+    if(arr_a.length != arr_b.length) {
+        check = false;
+    }
     if (arr_a.length == arr_b.length) {
         for (i = 0; i < arr_a.length; i++) {
             if (arr_a[i] !== arr_b[i]) {
-                console.log('chuỗi 1 khác chuỗi 2')
                 check = false;
                 break;
+            } else {
+                check = true;
             }
         }
-        if (check == false || arr_a.length != arr_b.length) {
-            console.log('chuỗi 1 giống chuỗi 2');
-        }
     }
+    if (check) {
+        alert('chuỗi 1 giống chuỗi 2');
+    } else {
+        alert('chuỗi 1 khác chuỗi 2');
+    }
+
 </script>
 </body>
 </html>

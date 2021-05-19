@@ -15,11 +15,11 @@ let average;
 for(i=0; i < b.length; i++) {
     b[i] = parseInt(prompt('input element: '))
     sum+=b[i]
-    average = sum/n;
     if (max < b[i]) {
         max = b[i]
     }
 }
+average = sum/n;
 document.write('số lớn nhất là ' + max + '<br>')
 document.write('giá trị trung bình của mảng là ' + average)
 
