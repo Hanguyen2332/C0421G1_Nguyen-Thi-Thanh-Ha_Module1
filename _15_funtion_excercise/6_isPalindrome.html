@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //sử dụng đệ quy để kiểm tra một từ có phải là từ đối xứng không?
+    function isPalindrome(word) {
+        if (word.length == 0) {
+            return false;
+        } else if (word[0] != word[word.length - 1]) {
+            return false;
+        }
+        for (let i = 1; i < word.length / 2; i++) {
+            if (word[i] !== word[word.length - 1 - i]) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
+    function check() {
+        let check_word = prompt('Please enter a word: ');
+        if (isPalindrome(check_word) === true) {
+            document.write(check_word + ' is a palindrome')
+        }
+        if (isPalindrome(check_word) === false) {
+            document.write(check_word + ' is not a palindrome!')
+        }
+    }
+    check()
+</script>
+</body>
+</html>

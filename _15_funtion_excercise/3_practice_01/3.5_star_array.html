@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // tìm tên chòm sao tương ứng với tên ngôi sao
+    let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let chomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+    let starName = prompt('enter star name:')
+    findStar()
+
+    // làm sao để nhập tên ngôi sao chữ hoa/thường đều cho ra kết quả??
+    function findStar() {
+        let check = true
+        for (i = 0; i < star.length; i++) {
+            if (star[i] == starName) {
+                check = true;
+                break;
+            } else {
+                check = false
+            }
+        }
+        if (check) {
+            return alert('tên chòm sao tương ứng là: ' + chomSao[i])
+        } else {
+            return alert('không tìm thấy ngôi sao');
+        }
+    }
+</script>
+</body>
+</html>
