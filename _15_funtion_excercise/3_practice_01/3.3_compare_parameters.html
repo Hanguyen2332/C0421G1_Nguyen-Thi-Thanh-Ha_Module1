@@ -8,16 +8,13 @@
 <script>
     function compare_param(a, b) {
         if (a > b) {
-            //alert('số thứ nhất lớn hơn số thứ 2')
-            return alert('số thứ nhất lớn hơn số thứ 2')
+            return 'số thứ nhất lớn hơn số thứ 2'
         } else {
             sum = parseFloat(a + b)
-            // alert('tổng 2 số là: ' + sum);
-            return alert('tổng 2 số là: ' + sum);
+            return 'tổng 2 số là: ' + sum;
         }
     }
-    // compare_param(1,5)
-    let result = compare_param(6, 5)
+    let result = document.write(compare_param(4, 5));
 
 </script>
 </body>

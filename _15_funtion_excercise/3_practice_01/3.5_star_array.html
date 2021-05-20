@@ -15,8 +15,8 @@
     // làm sao để nhập tên ngôi sao chữ hoa/thường đều cho ra kết quả??
     function findStar() {
         let check = true
-        for (i = 0; i < star.length; i++) {
-            if (star[i] == starName) {
+        for (let i = 0; i < star.length; i++) {
+            if (star[i].toUpperCase == starName.toUpperCase) {
                 check = true;
                 break;
             } else {

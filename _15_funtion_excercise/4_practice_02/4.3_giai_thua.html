@@ -9,12 +9,16 @@
     // tạo hàm tính giai thừa của một số nguyên bất kỳ
     function giaiThua(num) {
         let mul = 1;
-        for(i=num;i>=1; i--) {
+        if(num < 0) {
+            return 'Không tồn tại giai thừa'
+        }
+        for(let i=num;i>=1; i--) {
             mul *= i;
         }
         return mul;
     }
-    result = document.write(giaiThua(4))
+    let a = parseInt(prompt('input number: '))
+    result = document.write('giai thừa của ' +  a + ' = '+ giaiThua(a));
 </script>
 </body>
 </html>

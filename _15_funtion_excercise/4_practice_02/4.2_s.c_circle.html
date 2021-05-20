@@ -8,14 +8,14 @@
 <script>
     //Diện tích, hàm tính chu vi hình tròn.
     function chuVi_hinhtron(r) {
-        return 2 * r * 3.14
+        return 2 * r * Math.PI
     }
 
     function dienTich_hinhtron(r) {
-        return r * r * 3.14
+        return r**2* Math.PI
     }
-    result_c = document.write(chuVi_hinhtron(3) + '<br>')
-    result_s = document.write(dienTich_hinhtron(3))
+    result_c = document.write('Chu vi = ' + chuVi_hinhtron(3) + '<br>')
+    result_s = document.write('Diện tích = ' + dienTich_hinhtron(3))
 </script>
 </body>
 </html>
