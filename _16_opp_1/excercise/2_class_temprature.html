@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //[Bài tập] Xây dựng lớp mô tả Temperature
+    /* Độ K = Độ C + 273.15
+       Độ F = Độ C x 1.8 + 32
+    */
+    class MyTemperature {
+        constructor(oc) {
+            this.oc = oc;  //làm sao để set giá trị nhỏ nhất -273 độ/ Tại sao parseFloat ở đây k có tác dụng? -  vì hàm này chỉ để khai báo thuộc tính à???
+
+        }
+        covertTo_OF() {
+            return document.write('Độ F = ' +  parseFloat(this.oc*1.8+32) + '<br>');
+        }
+        covertTo_OK() {
+            return document.write('Độ K = ' + parseFloat(this.oc+273.15));
+        }
+    }
+    let temperature = new MyTemperature(25);
+    temperature.covertTo_OF();
+    temperature.covertTo_OK();
+</script>
+</body>
+</html>

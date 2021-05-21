@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            color: ;
+        }
+    </style>
+</head>
+<body>
+<canvas id="funnyCircle" width="1000px" ; height="1000px"></canvas>
+<script>
+    // arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, anticlockwise?: boolean): void;
+    class FunnyCircle {
+        constructor(x, y, radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+        }
+        getRandomRange() {
+            return Math.floor(Math.random() * 300);
+        }
+        getRandomColor() {
+            let yellow = this.getRandomRange();
+            let blue = this.getRandomRange();
+            let orange = this.getRandomRange();
+            return "rgb(" + yellow + "," + blue + "," + orange +")";
+        }
+        drawCircle() {
+            let canvas = document.getElementById('funnyCircle');
+            canvas = canvas.getContext('2d');
+            let circle = new FunnyCircle(this.x, this.y, this.radius);
+            canvas.arc(this.x, this.y, this.radius, 0, 3 * Math.PI);
+            canvas.fillStyle = this.getRandomColor(); // nhớ thêm THIS. vào trước tên thuộc tính/hành động khi gọi và sử dụng nó (thuộc tính/hành động của đối tượng ngày)
+            canvas.fill();
+        }
+        multi_drawCircle() {
+            for (let i = 0; i <= 40; i++) {
+             this.drawCircle();
+            }
+        }
+    }
+
+
+    let a = Math.random() * window.innerWidth;
+    let b = Math.random() * window.innerHeight;
+    let radius = Math.floor(Math.random() * 80);
+    let circle = new FunnyCircle(a,b,radius);
+    circle.multi_drawCircle();              //tại sao không cùng lúc tạo ra được 40 hình tròn?
+
+
+</script>
+</body>
+</html>

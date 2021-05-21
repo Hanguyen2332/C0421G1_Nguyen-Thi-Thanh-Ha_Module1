@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="displayRect" width="1000px" height="1000px"></canvas>
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        calculate_S() {
+            return document.write('Diện tích = ' + this.width * this.height + '<br>');
+        }
+
+        calculate_C() {
+            return document.write('Chu vi = ' + (this.width + this.height) * 2);
+        }
+
+        drawRectangle(w, h) {
+            let canvas = document.getElementById('displayRect');
+            canvas = canvas.getContext('2d');
+            canvas.rect(100, 100, this.width, this.height);
+            canvas.stroke();
+            canvas.fillStyle = 'orange';
+            canvas.fill();
+        }
+    }
+
+    let myRectangle = new Rectangle(100, 200);
+    myRectangle.drawRectangle();
+
+    myRectangle.width = 50;
+    myRectangle.height = 75;
+    myRectangle.calculate_S();  //KHÔNG hiển thị kq??
+    myRectangle.calculate_C() //KHÔNG hiển thị kq??
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //[Thực hành] Xây dựng lớp Date.
+    class  Date {
+        constructor(day,month,year) {
+            this.day = parseInt(day);
+            this.month = parseInt(month);
+            this.year =  parseInt(year);
+        }
+        getDay() {
+           return this.day;
+        }
+        getMonth() {
+            return this.month;
+        }
+        getYear() {
+            return this.year;
+        }
+        setDay(day) {
+            this.year = parseInt(day);
+        }
+        setMonth(month) {
+            this.month = parseInt(month);
+        }
+        setYear(year) {
+          this.year = parseInt(year);
+        }
+        setDate(day,month,year) {
+            this.setDay();
+            this.setMonth();
+            this.setYear();
+        }
+        toString() {
+            // return document.write('dd' + this.getDay() + '/' + 'mm ' + this.getMonth() + '/' + 'yyyy ' + this.getYear())
+           return   this.getDay() + '/' + this.getMonth() + '/' + this.getYear();         //'dd/mm/yyyy'
+        }
+    }
+    let ojbDate = new Date(2,2,2021);
+    // let day = ojbDate.getDay();
+    // let month = ojbDate.getMonth();
+    // let year = ojbDate.setYear();
+    // document.write(day + "/" + month + "/" + year);   //OK
+
+    // a = ojbDate.setDate(10,10,2000);  //Undefined???
+    // alert(a)
+    // let month = ojbDate.setMonth(10);
+    // let year = ojbDate.getYear(2019);
+    // document.write(day);
+
+    document.write(ojbDate.toString());                 //ok
+
+
+
+</script>
+</body>
+</html>
