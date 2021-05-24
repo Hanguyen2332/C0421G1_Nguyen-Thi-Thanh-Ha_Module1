@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Battery {
+        constructor(energy) {
+           this.energy = energy;
+        }
+        setEnergy(energy) {
+            this.energy = energy;
+        }
+        getEnergy() {
+            return this.energy + '%';
+        }
+        decreaseEnergy() {
+            if(this.energy>0) {
+                this.energy--;
+            }
+        }
+    }
+    // let b = new Battery(75);
+    // b.getEnergy();
+    class FlashLamp {
+        constructor(status,battery) {   //đèn nháy, đèn luôn tắt nếu k bật --> bỏ status
+            this.status = false;
+            this.battery = battery;
+        }
+        setBattery(battery) {
+            this.battery = battery;
+        }
+        getBatteryInfo() {
+            return this.battery.getEnergy();
+        }
+        light() {
+            if(this.status) {
+                alert("Lighting");
+            } else {
+                alert("Not lighting");
+            }
+        }
+        turnOn() {
+            if(this.battery.getEnergy() > 0) {
+                this.status = true;
+                this.battery.decreaseEnergy()
+                return false;
+            }
+        }
+        turnOff() {
+            return  false;
+        }
+    }
+
+    //tạo 2 đối tượng của class Battery && class FlashLamp
+    let battery = new Battery(10);
+    let flashLamp = new FlashLamp(true,battery);
+
+     //truy cập phương thức của đối tượng đó:
+    document.write(flashLamp.getBatteryInfo());
+
+    // flashLamp.light()
+    alert('check kịch bản đèn turnOn');
+    flashLamp.turnOn();
+    flashLamp.light();
+    alert('check kịch bản đèn turnOn')
+    flashLamp.turnOff();
+    flashLamp.light();
+
+
+
+</script>
+</body>
+</html>

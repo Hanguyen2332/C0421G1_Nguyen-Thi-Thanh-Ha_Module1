@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = 10;
+        }
+
+        decrease() {
+            if (this.weight > 0) {
+                this.weight--;
+            }
+        }
+
+        isEmpty() {
+            if (this.weight == 0) {
+                return true
+            } else {
+                return false;
+            }
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender == 'male') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        setGender(gender) {
+            this.gender = true;
+        }
+
+        checkApple(apple) {
+            if (apple.getWeight() > 0) {
+                return true
+            } else {
+                return false;
+            }
+        }
+
+        eat(apple) {
+            if(apple.getWeight()>0) {
+                this.weight++
+            }
+            apple.decrease();
+        }
+
+        say(string) {
+            alert(this.name + ' said: ' + string);
+        }
+        getName() {
+            return this.name;
+        }
+        setName(name) {
+            this.name = name;
+        }
+        getWeight() {
+            return this.weight;
+        }
+        setWeight(weight) {
+            this.weight = weight;
+        }
+    }
+
+    let apple = new Apple();
+    let adam = new Human('Adam', 'male', 40);
+    let eva = new Human('Eva', 'female', 65);
+    adam.eat(apple)
+    alert("Apple weight: " + apple.getWeight());
+    alert("Adam weight: " + adam.getWeight());
+    eva.eat(apple)
+    alert("Apple weight: " + apple.getWeight());
+    alert("Eva weight: " + eva.getWeight());
+    adam.say('ngon quá!')
+    eva.say('tuyệt hảo')
+
+
+
+</script>
+</body>
+</html>

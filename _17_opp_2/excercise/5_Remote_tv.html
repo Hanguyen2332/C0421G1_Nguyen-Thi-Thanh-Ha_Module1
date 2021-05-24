@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remote </title>
+</head>
+<body>
+<script>
+    //[*Bài tập] Phát triển chương trình sử dụng Remote để điều khiển Tivi
+
+    class Tivi {
+        constructor(channel,volume,status) {
+            this.channel =  channel;
+            this.volume = volume;
+            this.status = true;
+        }
+        setChannel(newChannel) {
+            this.channel = newChannel;
+        }
+        getChannel() {
+            return this.channel;
+        }
+        turnDownVol() {
+            if(this.volume>0) {
+                return this.volume=this.volume-1;
+            } else {
+                alert('volume is minimum');
+            }
+        }
+        turnUpVol() {
+            if(this.volume<=100) {
+                return this.volume= this.volume+1;
+            } else {
+                alert('volume is maximum');
+            }
+        }
+        turnOn() {
+            if(this.status) {
+                alert('Turned on TV')
+                this.status = false;
+            }
+        }
+        turnOff() {
+            if(this.status==false) {
+                alert('Turned off TV')
+                this.status=true
+            }
+        }
+    }
+    class Remote {
+        constructor(code) {
+            this.code = code;
+        }
+        controlChannel() {
+            return this.code.getChannel();
+        }
+        controlVolDown() {
+            return this.code.turnDownVol();
+        }
+        controlVolUp() {
+           return this.code.turnUpVol();
+        }
+        turnOn() {
+            this.code.turnOn()
+        }
+        turnOff() {
+            this.code.turnOff()
+        }
+    }
+    let samsungF1Tv = new Tivi(7,19,false);
+    let remote = new Remote(samsungF1Tv);
+    // remote.turnOn()        //ok
+    // remote.turnOff()
+    // samsungF1Tv.setChannel(3);          //ok
+    // alert(remote.controlChannel());
+    alert(remote.controlVolUp());        //tại sao nếu để là: this.volume++    ==>  Volume vẫn là 19, không ++?
+    alert(remote.controlVolDown());     //tại sao nếu để là: this.volume--    ==>  Volume vẫn là 19, không --?
+
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //công tắc phụ thuộc vào đèn
+
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        turnOn() {
+            if (this.status) {
+                alert("Electriclamp is ON!");
+            } else {
+                alert("Turned on the electriclamp");
+                this.status = true;
+            }
+        }
+
+        turnOff() {
+            if (this.status) {
+                alert("Turned off the electriclamp");
+                this.status = false;
+            } else {
+                alert("Electriclamp is OFF!");
+
+            }
+        }
+    }
+
+    class SwitchButton {
+        constructor(lamp) {
+            this.lamp = lamp;
+        }
+
+        conectToLamp(newElectricLamp) {
+            this.newElectricLamp = newElectricLamp;
+        }
+
+        turnOn() {
+            this.newElectricLamp.turnOn();
+        }
+
+        turnOff() {
+            this.newElectricLamp.turnOff();
+        }
+    }
+
+    let lamp = new ElectricLamp(true);
+    let switcher = new SwitchButton(lamp);
+    switcher.conectToLamp(lamp);
+    alert(switcher.conectToLamp())
+    switcher.turnOn();
+    switcher.turnOff();
+
+    lamp.status = false;
+    switcher.turnOn();
+    switcher.turnOff();
+    for (i = 1; i <= 8; i++) {
+        switcher.turnOn();
+        switcher.turnOff();
+    }
+
+
+</script>
+</body>
+</html>

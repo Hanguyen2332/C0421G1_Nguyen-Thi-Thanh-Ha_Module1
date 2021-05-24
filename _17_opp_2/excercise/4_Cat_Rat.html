@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //[Bài tập]: mô tả mèo bắt chuột.
+    class Rat {
+        constructor(name, weight, speed, status) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = status;
+        }
+        growl() {
+            alert("Chit, chit");
+        }
+    }
+    class Cat {
+        constructor(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+
+        growl() {
+            alert("Meow meow");
+        }
+
+        catch(rat) {
+            if (this.speed > rat.speed) {
+                alert(this.name + " catched " + rat.name);
+            } else {
+                alert(this.name + " can't catch " + rat.name);
+            }
+        }
+
+        eat(rat) {
+            if (rat.status) {
+                this.weight += rat.weight;
+                alert("cat ate rat. cat's weight:  " + this.weight);
+            } else {
+                alert("oh!rat dead!");
+            }
+        }
+    }
+    let jerry= new Rat("Jerry", 0.5, 20,true);
+    let tom = new Cat("Tom", 3, 30);
+    jerry.growl();
+    tom.growl();
+    tom.catch(jerry);
+
+    jerry.speed = 20;
+    tom.speed =15;
+    tom.catch(jerry);
+
+
+</script>
+</body>
+</html>

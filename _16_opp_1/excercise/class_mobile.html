@@ -44,8 +44,10 @@
             if (this.power == 100) {
                 alert('Fully charged! (100%)');
             } else {
-                this.power = 100
-                alert('charging: ' + this.power + '%');
+                for(let i=this.power;i<100;i++) {
+                    this.power++;
+                }
+                alert('fully charged :' + this.power + '%. Disconnect the supply.');
             }
         }
         setMes(message) {
@@ -63,15 +65,14 @@
             mobile.inboxArea.push(message);
             this.powerDecrease();
         }
-        seeSendMes() {
+        seeOutbox() {
             this.powerDecrease();
-            return this.outboxArea;
+            console.log(this.outboxArea.join(','));
         }
-        seeGetMes() {
+        seeInbox() {
             this.powerDecrease();
-            return this.inboxArea;
+            console.log(this.inboxArea.join(','));
         }
-
         operate() {
             if (this.status == false) {
                 if (confirm('Mobile is OFF. Turn mobile on to use?')) {
@@ -82,13 +83,13 @@
         }
     }
 
-    let iphone = new Mobile(95, 1, 0, 1);
-    let nokia = new Mobile(27, 0, 0, 1);
+    let iphone = new Mobile(95);
+    let nokia = new Mobile(27);
     nokia.sendMes('from nokia: swadi kha iphone ', iphone);
-    // alert(iphone.getMes());            // ok
-    // iphone.chargePower();           // ok
-    // alert(nokia.seeSendMes());     //not ok
-    // alert(iphone.seeGetMes());       //not ok
+    console.log(iphone.getMes());            // ok
+    iphone.chargePower();           // ok
+    // nokia.seeOutbox();               //ok
+    // iphone.seeInbox();               //ok
     // iphone.operate()              //ok
     // iphone.turnOn()               //ok
     // iphone.turnOff()
