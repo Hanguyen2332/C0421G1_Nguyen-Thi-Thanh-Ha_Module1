@@ -6,46 +6,94 @@
 </head>
 <body>
 <script>
-    let Moile = {
-        // power: ...,
-        save_Edit_Mes(editMes) {
+    class Mobile {
+        constructor(power, editArea, inboxArea, outboxArea) {
+            this.power = power;
+            this.editArea = [];
+            this.inboxArea = [];
+            this.outboxArea = [];
+            this.status = false;
+        }
 
-        },
-        save_Inbox(inbox) {
+        turnOn() {
+            if (this.status) {
+                alert('Mobile is ON');
+                this.status = true;
+            } else {
+                alert('turned on mobile')
+                this.status = true;
+            }
+            this.powerDecrease();
+        }
 
-        },
-        save_Outbox(outbox) {
+        turnOff() {
+            if (this.status) {
+                alert('turned off mobile')
+                this.status = false;
+            } else {
+                alert('Mobile is OFF');
+                this.status = false;
+            }
+        }
+        powerDecrease() {
+            if (this.power > 0) {
+                this.power--;
+            }
+        }
+        chargePower() {
+            if (this.power == 100) {
+                alert('Fully charged! (100%)');
+            } else {
+                this.power = 100
+                alert('charging: ' + this.power + '%');
+            }
+        }
+        setMes(message) {
+            this.message = message;
+            this.editArea.push(message)
+            this.powerDecrease();
+        }
+        getMes() {
+            this.powerDecrease();
+            return this.message;
+        }
+        sendMes(message, mobile) {
+            mobile.setMes(message);
+            this.outboxArea.push(message);
+            mobile.inboxArea.push(message);
+            this.powerDecrease();
+        }
+        seeSendMes() {
+            this.powerDecrease();
+            return this.outboxArea;
+        }
+        seeGetMes() {
+            this.powerDecrease();
+            return this.inboxArea;
+        }
 
-        },
-        check_OnOff() {
-
-        },
-        on_Mobile() {
-
-        },
-        off_Mobile() {
-
-        },
-        charge_Power() {
-
-        },
-        edit_Mes() {
-
-        },
-        receive_Mes() {
-
-        },
-        send_Mes() {
-
-        },
-        show_inbox() {
-
-        },
-        show_sentMes() {
-
-        },
-
+        operate() {
+            if (this.status == false) {
+                if (confirm('Mobile is OFF. Turn mobile on to use?')) {
+                    this.status = true
+                    alert('Mobile is turning ON')
+                }
+            }
+        }
     }
+
+    let iphone = new Mobile(95, 1, 0, 1);
+    let nokia = new Mobile(27, 0, 0, 1);
+    nokia.sendMes('from nokia: swadi kha iphone ', iphone);
+    // alert(iphone.getMes());            // ok
+    // iphone.chargePower();           // ok
+    // alert(nokia.seeSendMes());     //not ok
+    // alert(iphone.seeGetMes());       //not ok
+    // iphone.operate()              //ok
+    // iphone.turnOn()               //ok
+    // iphone.turnOff()
+    // iphone.turnOn()
+    // iphone.turnOn()
 </script>
 </body>
 </html>

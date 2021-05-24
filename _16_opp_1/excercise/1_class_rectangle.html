@@ -13,14 +13,17 @@
             this.height = height;
         }
 
-        calculate_S() {
-            return document.write('Diện tích = ' + this.width * this.height + '<br>');
+        calculate_S(width, height) {
+            this.width = width;
+            this.height = height;
+            return document.write('Diện tích = ' + parseFloat(this.width) * parseFloat(this.height) + '<br>');
         }
 
-        calculate_C() {
-            return document.write('Chu vi = ' + (this.width + this.height) * 2);
+        calculate_C(width, height) {
+            this.width = width;
+            this.height = height;
+            return document.write('Chu vi = ' + (parseFloat(this.width) + parseFloat(this.height)) * 2);
         }
-
         drawRectangle(w, h) {
             let canvas = document.getElementById('displayRect');
             canvas = canvas.getContext('2d');

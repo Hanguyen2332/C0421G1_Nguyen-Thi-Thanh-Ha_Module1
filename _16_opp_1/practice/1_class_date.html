@@ -32,28 +32,27 @@
           this.year = parseInt(year);
         }
         setDate(day,month,year) {
-            this.setDay();
-            this.setMonth();
-            this.setYear();
+            this.setDay(day);
+            this.setMonth(month);
+            this.setYear(year);
         }
         toString() {
-            // return document.write('dd' + this.getDay() + '/' + 'mm ' + this.getMonth() + '/' + 'yyyy ' + this.getYear())
            return   this.getDay() + '/' + this.getMonth() + '/' + this.getYear();         //'dd/mm/yyyy'
         }
     }
     let ojbDate = new Date(2,2,2021);
-    // let day = ojbDate.getDay();
-    // let month = ojbDate.getMonth();
-    // let year = ojbDate.setYear();
-    // document.write(day + "/" + month + "/" + year);   //OK
+    let day = ojbDate.getDay();
+    let month = ojbDate.getMonth();
+    let year = ojbDate.setYear();
+    document.write(day + "/" + month + "/" + year);   //OK
 
-    // a = ojbDate.setDate(10,10,2000);  //Undefined???
-    // alert(a)
-    // let month = ojbDate.setMonth(10);
-    // let year = ojbDate.getYear(2019);
-    // document.write(day);
+    ojbDate.setDate(10,10,2000);  // GOOD Undefined???
+    alert(ojbDate.toString());
 
-    document.write(ojbDate.toString());                 //ok
+    // // BAD-Undefined???  lý do: setDate() là phương thức không trả về giá trị --> gán a--> Undefined.
+    // a = ojbDate.setDate(10,10,2000);
+    // alert(ojbDate.toString());
+
 
 
 

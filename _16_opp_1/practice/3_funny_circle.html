@@ -19,36 +19,35 @@
             this.y = y;
             this.radius = radius;
         }
+
         getRandomRange() {
             return Math.floor(Math.random() * 300);
         }
+
         getRandomColor() {
             let yellow = this.getRandomRange();
             let blue = this.getRandomRange();
             let orange = this.getRandomRange();
-            return "rgb(" + yellow + "," + blue + "," + orange +")";
+            return "rgb(" + yellow + "," + blue + "," + orange + ")";  //rgb(GIÁ TRỊ 1, GIÁ TRỊ 2, GIÁ TRỊ 3): HÀM kết hợp màu
         }
+
         drawCircle() {
             let canvas = document.getElementById('funnyCircle');
             canvas = canvas.getContext('2d');
-            let circle = new FunnyCircle(this.x, this.y, this.radius);
-            canvas.arc(this.x, this.y, this.radius, 0, 3 * Math.PI);
+            canvas.beginPath()    // vẽ lại từ đầu. nếu không có phương thức này --> các hình tròn sẽ bắt đầu từ cùng 1 gốc tọa độ
+            canvas.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
             canvas.fillStyle = this.getRandomColor(); // nhớ thêm THIS. vào trước tên thuộc tính/hành động khi gọi và sử dụng nó (thuộc tính/hành động của đối tượng ngày)
             canvas.fill();
         }
-        multi_drawCircle() {
-            for (let i = 0; i <= 40; i++) {
-             this.drawCircle();
-            }
-        }
     }
 
-
-    let a = Math.random() * window.innerWidth;
-    let b = Math.random() * window.innerHeight;
-    let radius = Math.floor(Math.random() * 80);
-    let circle = new FunnyCircle(a,b,radius);
-    circle.multi_drawCircle();              //tại sao không cùng lúc tạo ra được 40 hình tròn?
+    for (let i = 0; i <= 5; i++) {
+        let a = Math.random() * window.innerWidth;
+        let b = Math.random() * window.innerHeight;
+        let radius = Math.floor(Math.random() * 90);
+        let circle = new FunnyCircle(a,b,radius);
+        circle.drawCircle();
+    }
 
 
 </script>
