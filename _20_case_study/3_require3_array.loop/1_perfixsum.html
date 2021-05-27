@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Cho mảng a chỉ chứa các số nguyên
+    //Xây dựng mảng b là prefix sums của mảng a
+
+    let n = parseInt(prompt('enter array a length: '))
+    let a = new Array(n);
+    let b =[];
+    let sum = 0;
+    for(let i=0; i <a.length; i++) {
+        a[i] = parseInt(prompt('enter element ' + i));
+        sum+=a[i];
+        b.push(sum);
+    }
+    document.write('array a: ' + a + '<br>')
+    document.write('array b: ' +b);
+</script>
+</body>
+</html>

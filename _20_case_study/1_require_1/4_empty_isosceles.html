@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //: Vẽ tam giác cân rỗng có chiều cao h. Ví dụ: h = 5
+    let h = 5;
+    for (i = 0; i < h; i++) {
+        for (j = 1; j < 2 * h; j++) {  //taij sao j = 1 mới đều?
+            if (j == h + i || j == h - i || i == h - 1) {
+                document.write('*&nbsp');
+            } else {
+                document.write('&nbsp&nbsp ');
+            }
+        }
+        document.write('<br> <br>');
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 style="color: #f30b0b">Hà-Hóm-Hỉnh's Drinkfood menu</h3>
+<div id="bill"></div>
+<div id="order"></div>
+<script>
+    let menu = ['Cafe','Cam vắt','Nước ép cà rốt','Nước ép cà chua',' Nước lọc',' Nước dừa'];
+    let unitPrice = [12000,15000,14000,15000,7000,30000]
+    order(menu);
+
+    //tạo menu trên HTML
+    function order(menu) {
+        let html = '<table  cellspacing="4px" border="0px">'
+        for (let i = 0; i< menu.length; i++) {
+             html += '<tr>' +
+                '<td style="color: orange">' + menu[i] + '</td>' +
+                 '<td style="background: blueviolet"><button type="button" onclick="orderDrink('+ i +')">chọn</button> </td>'+
+            '</tr>'
+        }
+        html += '</table>'
+        document.getElementById('order').innerHTML = html;
+    }   //ok
+
+    //tính tiền
+    function orderDrink(index) {
+        alert('giá ' + menu[index] + ': ' + unitPrice[index] + 'đ');
+        let soLuong = parseInt(prompt('Please enter amount: '))
+        let price = unitPrice[index]*soLuong;
+        document.getElementById('bill').innerHTML = ('Vui lòng thanh toán: ' + price.toLocaleString() + 'đ');
+    }
+</script>
+</body>
+</html>

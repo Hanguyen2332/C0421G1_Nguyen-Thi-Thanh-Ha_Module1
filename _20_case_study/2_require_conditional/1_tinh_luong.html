@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Viết một chương trình để nhập lương nhân viên, tính thuế thu nhập và lương ròng
+    //20% thuế thu nhập nếu lương là 15 triệu.
+    //10% thuế thu nhập nếu lương từ 7 đến 15 triệu.
+    //5% thuế thu nhập nếu lương dưới 7 triệu
+let gross = parseInt(prompt('enter gross salary : '));
+let net;
+let incomeTax;
+    if (gross >= 15000000) {
+        incomeTax = gross*20/100;
+    } else if(gross >= 7000000) {
+        incomeTax = gross*10/100;
+        net = gross - incomeTax;
+    } else {
+        incomeTax = gross*5/100;
+    }
+    net = (gross - incomeTax).toLocaleString();
+    document.write('income tax is: ' +incomeTax.toLocaleString() + '<br>')
+    document.write('net salary is: '+net)
+</script>
+</body>
+</html>
