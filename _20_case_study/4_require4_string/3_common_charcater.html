@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    s1 = "aabcc";
+    s2 = "adcaa";
+    commonCharacterCount(s1, s2)
+
+    function commonCharacterCount(s1, s2) {
+        let commonCharecter = []
+        let s1count = 0;
+        let s2count = 0;
+        let arrCount1 = [];
+        let arrCount2 = [];
+        let sumCommon = 0;
+
+        for (let i = 0; i < s1.length; i++) {
+            if (s2.indexOf(s1[i]) != -1) {
+                commonCharecter.push(s1[i]);
+            }
+        }
+        let arr = Array.from(new Set(commonCharecter)); // [a,c]
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < s1.length; j++) {
+                if (arr[i] == s1[j]) {
+                    s1count++;
+                }
+            }
+            arrCount1.push(s1count);
+            s1count = 0;
+        }
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < s2.length; j++) {
+                if (arr[i] == s2[j]) {
+                    s2count++;
+                }
+            }
+            arrCount2.push(s2count);
+            s2count = 0;
+        }
+        for (let i = 0; i < arrCount1.length; i++) {
+            if (arrCount1[i] <= arrCount2[i]) {
+                sumCommon += arrCount1[i];
+            } else {
+                sumCommon += arrCount2[i];
+            }
+        }
+        return alert(sumCommon);
+    }
+
+
+</script>
+</body>
+</html>

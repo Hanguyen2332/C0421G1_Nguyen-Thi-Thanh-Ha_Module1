@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //1. biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền nhau và bắt đầu mỗi từ phải in hoa.
+    // Ví dụ tRuong    TaN   HAI => Truong Tan Hai.
+
+    let str='nGUYen   tu lONG '
+    alert(format(str));
+    function format(str) {
+        let newArr = [];
+        let convert = ''
+        let arr = str.toLocaleLowerCase().split(' '); //Chuỗi --> mảng: ['hoa','hau',   ','  ,'hoan']
+        for (let i =0; i<arr.length; i ++ ) {
+            if(arr[i] != '') {
+                convert = arr[i].charAt(0).toUpperCase()+ arr[i].substring(1);
+                newArr.push(convert);
+            }
+        }
+        let newStr = newArr.join(' ')
+        return newStr; // chưa cắt được dấu cách!!!!
+    }
+
+
+    // //2. tìm từ dài nhất trong chuỗi:
+
+    // a = 'covid 19 nen phai o nha';
+    // alert(longestWord(a))
+    // function longestWord(string) {
+    //     let arr = string.split(" ");
+    //     let longest = 0;
+    //     let word = ' ' ;
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (longest < arr[i].length) {
+    //             longest = arr[i].length;
+    //             word = arr[i];
+    //         }
+    //     }
+    //     return word;
+    // }
+</script>
+</body>
+</html>

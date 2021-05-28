@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó
+    //Ví dụ: s = "cabca", thì kết quả differentSymbolsNaive(s) = 3.
+
+    let s = 'cabca';     //a bị push 2 lần==>sai
+
+    let result = [s[0]];
+    for(let i=1; i<s.length;i++) {
+        if(s[0] !== s[i] && result.indexOf(s[i]) == -1) {
+            result.push(s[i]);
+        } else {
+            continue;
+        }
+    }
+    alert(result.length)
+
+</script>
+</body>
+</html>

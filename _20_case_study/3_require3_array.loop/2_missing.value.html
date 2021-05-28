@@ -8,17 +8,20 @@
 <script>
     //Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A
     let a = [7, 2, 5, 3, 5, 3];
-    let b = [7, 2, 5, 4, 6, 9, 3, 5, 3, 5, 3];
+    let b = [7, 2, 5, 9, 6, 4, 3, 5, 3, 5, 3];
     let result = [];
 
     let c = Array.from(new Set (a));  //loại phần tử trùng lặp rút ngắn chuỗi
     let d = Array.from(new Set (b))
 
     for (let i = 0; i < d.length; i++) {
-        if (c.indexOf(d[i]) != -1) {
+        if (c.indexOf(d[i]) != -1 && result.indexOf(d[i]) == -1 ) {
             continue;
         } else {
             result.push(d[i]);
+            result.sort(function (a,b) {
+                return a-b
+            })
         }
     }
     document.write(result);

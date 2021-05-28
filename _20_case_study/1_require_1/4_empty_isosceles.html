@@ -9,11 +9,11 @@
     //: Vẽ tam giác cân rỗng có chiều cao h. Ví dụ: h = 5
     let h = 5;
     for (i = 0; i < h; i++) {
-        for (j = 1; j < 2 * h; j++) {  //taij sao j = 1 mới đều?
+        for (j = 1; j < 2 * h; j++) {  //tại sao j = 1: vì độ rộng đáy tối đa là 9*
             if (j == h + i || j == h - i || i == h - 1) {
-                document.write('*&nbsp');
+                document.write('*');
             } else {
-                document.write('&nbsp&nbsp ');
+                document.write('&nbsp; ');
             }
         }
         document.write('<br> <br>');
