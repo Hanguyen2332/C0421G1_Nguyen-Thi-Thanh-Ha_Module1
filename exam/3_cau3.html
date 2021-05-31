@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //viết hàm findMaxScore() với đầu vào là mảng điểm,
+    // đầu ra là điểm số cao nhất được tìm thấy trong mảng đó và vị trí của điểm số cao nhất xuất hiện trong mảng.
+
+    let n = parseInt(prompt('enter array length: '))
+    let arrMark = new Array(n);
+    for (let i = 0; i < arrMark.length; i++) {
+        arrMark[i] = parseFloat(prompt('enter element ' + i));
+    }
+    alert(findMaxScore(arrMark));
+
+    function findMaxScore(arrMark) {
+        let maxScore = arrMark[0]
+        let index = 0;
+        for (let i = 1; i < arrMark.length; i++) {
+            if (arrMark[i] >= maxScore) {
+                maxScore = arrMark[i];
+                index = i;
+            }
+        }
+        return 'Max scrore is: ' + maxScore + ' at index ' + index;
+    }
+</script>
+</body>
+</html>

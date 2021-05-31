@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //tạo class Student
+
+    class Student {
+        constructor(numberOrder, fullname, dayOfBirth, avgMark) {
+            this.numberOrder = numberOrder;
+            this.fullname = fullname;
+            this.dayOfBirth = dayOfBirth;
+            this.avgMark = avgMark;
+        }
+        getInfor() {
+            return document.write('Số thứ tự: ' + this.numberOrder + '<br>' +
+                'Họ và Tên: ' + this.fullname + '<br>' +
+                'Ngày sinh: ' + this.dayOfBirth + '<br>' +
+                'Điểm trung bình: ' + this.avgMark + '<br>')
+
+        }
+        getCheckLevel() {
+            if (this.avgMark > 8) {
+                return 'Học lực: GIỎI';
+            } else if (this.avgMark >= 6.5) {
+                return 'Học lực: KHÁ';
+            } else if (this.avgMark >= 5) {
+                return 'Học lực: TRUNG BÌNH';
+            } else if (this.avgMark >= 3.5) {
+                return 'Học lực: YẾU';
+            } else {
+                return 'Học lực: KÉM';
+            }
+        }
+    }
+    let student = new Student(14, 'Lý Thị Lụa', '11/11/1999', 8.5);
+    student.getInfor();
+    document.write(student.getCheckLevel() + '<br>');
+</script>
+</body>
+</html>

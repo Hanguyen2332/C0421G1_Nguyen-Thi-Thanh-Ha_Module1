@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Tạo một mảng rỗng, nhận 5 giá trị thuộc kiểu số nguyên được nhập bàn phím.
+    // Hiển thị mảng đã được sắp xếp theo thứ tự tăng dần ra màn hình.
+
+    let arr = new Array(5);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = parseInt(prompt('enter element ' + i));
+    }
+    document.write('array before sort: ' + arr + '<br>');
+
+    //C1:
+    arr.sort(function (a, b) {
+        return a - b;
+    })
+    document.write('array after sort: ' + arr);
+
+    //C2:
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = i + 1; j < arr.length; j++) {
+    //         let min = arr[i]
+    //         if (arr[j] < min) {
+    //             temp = arr[i]
+    //             arr[i] = arr[j];
+    //             arr[j] = temp;
+    //         }
+    //     }
+    // }
+    // document.write('array after sort: ' + arr);
+
+</script>
+</body>
+</html>
